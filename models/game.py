@@ -5,4 +5,7 @@ class Game:
         self.HANDS = {"rock": 0, "paper": 1, "scissors": 2}
 
     def play(self):
-        pass
+        if self.player1.hand == self.player2.hand:
+            return None
+        else:
+            return self.player2
