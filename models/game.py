@@ -7,5 +7,7 @@ class Game:
     def play(self):
         if self.player1.hand == self.player2.hand:
             return None
-        else:
+        elif self.HANDS[self.player1.hand] < self.HANDS[self.player2.hand]:
             return self.player2
+        else:
+            return self.player1

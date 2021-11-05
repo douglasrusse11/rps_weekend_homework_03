@@ -28,17 +28,14 @@ class TestGame(unittest.TestCase):
         self.game = Game(self.player1, self.player2)
         self.assertEqual(self.player2, self.game.play())
     
-    @unittest.skip('')
     def test_play_player2_player1_returns_player2(self):
         self.game = Game(self.player2, self.player1)
         self.assertEqual(self.player2, self.game.play())
     
-    @unittest.skip('')
     def test_play_player2_player3_returns_player3(self):
         self.game = Game(self.player2, self.player3)
         self.assertEqual(self.player3, self.game.play())
     
-    @unittest.skip('')
     def test_play_player3_player2_returns_player3(self):
         self.game = Game(self.player3, self.player2)
         self.assertEqual(self.player3, self.game.play())
