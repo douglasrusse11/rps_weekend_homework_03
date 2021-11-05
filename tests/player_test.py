@@ -5,7 +5,6 @@ class TestPlayer(unittest.TestCase):
     def setUp(self):
         self.player = Player("Bob", "rock")
 
-    @unittest.skip('')
     def test_player_has_name(self):
         self.assertEqual("Bob", self.player.name)
 
