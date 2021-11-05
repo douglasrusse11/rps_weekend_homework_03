@@ -7,11 +7,14 @@ class Game:
     def play(self):
         if self.player1.hand == self.player2.hand:
             return None
-        elif self.HANDS[self.player1.hand] == 0 and self.HANDS[self.player2.hand] == 2:
+        elif self.hand(self.player1) == 0 and self.hand(self.player2) == 2:
             return self.player1
-        elif self.HANDS[self.player2.hand] == 0 and self.HANDS[self.player1.hand] == 2:
+        elif self.hand(self.player2) == 0 and self.hand(self.player1) == 2:
             return self.player2
-        elif self.HANDS[self.player1.hand] < self.HANDS[self.player2.hand]:
+        elif self.hand(self.player1) < self.hand(self.player2):
             return self.player2
         else:
             return self.player1
+
+    def hand(self, player):
+        return self.HANDS[player.hand]
