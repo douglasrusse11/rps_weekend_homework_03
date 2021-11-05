@@ -5,8 +5,19 @@ body {
 
 header {
     background-color: rgb(105, 80, 80);
+    display: flex;
+    justify-content: space-between;
 }
 
 p > a {
     color: black;
+}
+
+nav {
+    align-self: center;
+}
+
+nav > a {
+    color: black;
+    text-decoration: none;
 }
