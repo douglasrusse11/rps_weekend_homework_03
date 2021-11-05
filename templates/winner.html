@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ winner_string }}</h1>
+<h2>{{ winner_string }}</h2>
 {% for player in players %}
     <div>
-        <h2>{{ player.name }}</h2>
-        <h3>{{ player.hand.capitalize() }}</h3>
+        <h3>{{ player.name }}</h3>
+        <h4>{{ player.hand.capitalize() }}</h4>
     </div>
 {% endfor %}
 {% endblock %}
