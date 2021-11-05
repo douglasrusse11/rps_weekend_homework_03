@@ -41,3 +41,9 @@ class TestRun_Game(unittest.TestCase):
         winner = run_game("rock", "scissors")
         self.assertEqual("Player 1", winner.name)
         self.assertEqual("rock", winner.hand)
+
+    def test_run_game_rock_banana_returns_404(self):
+        self.assertEqual(404, run_game("rock", "banana"))
+
+    def test_run_game_dinosaur_paper_returns_404(self):
+        self.assertEqual(404, run_game("dinosaur", "paper"))
