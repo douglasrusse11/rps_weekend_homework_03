@@ -5,6 +5,8 @@ class Game:
         self.HANDS = {"rock": 0, "paper": 1, "scissors": 2}
 
     def play(self):
+        if not self.player2.hand in self.HANDS:
+            return 404
         if self.player1.hand == self.player2.hand:
             return None
         elif self.hand(self.player1) == 0 and self.hand(self.player2) == 2:
