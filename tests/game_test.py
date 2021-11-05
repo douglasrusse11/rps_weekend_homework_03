@@ -7,6 +7,7 @@ class TestGame(unittest.TestCase):
         self.player1 = Player("Bob", "rock")
         self.player2 = Player("Tom", "paper")
         self.player3 = Player("Abe", "scissors")
+        self.player4 = Player("Rex", "microscope")
 
     def test_game_has_player1(self):
         self.game = Game(self.player1, self.player2)
@@ -47,3 +48,13 @@ class TestGame(unittest.TestCase):
     def test_play_player3_player1_returns_player1(self):
         self.game = Game(self.player3, self.player1)
         self.assertEqual(self.player1, self.game.play())
+    
+    @unittest.skip('')
+    def test_play_player1_player4_returns_404(self):
+        self.game = Game(self.player1, self.player4)
+        self.assertEqual(404, self.game.play())
+    
+    @unittest.skip('')
+    def test_play_player4_player1_returns_404(self):
+        self.game = Game(self.player4, self.player1)
+        self.assertEqual(404, self.game.play())
