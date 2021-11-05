@@ -2,4 +2,10 @@
 
 {% block content %}
 <h1>{{ winner_string }}</h1>
+{% for player in players %}
+    <div>
+        <h2>{{ player.name }}</h2>
+        <h3>{{ player.hand.capitalize() }}</h3>
+    </div>
+{% endfor %}
 {% endblock %}
