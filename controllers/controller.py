@@ -4,7 +4,7 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return render_template("index.html")
 
 @app.route('/<hand1>/<hand2>')
 def rps(hand1, hand2):
