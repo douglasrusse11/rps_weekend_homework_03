@@ -1,6 +1,5 @@
 import unittest
 from models.run_game import run_game
-from models.player import Player
 
 class TestRun_Game(unittest.TestCase):
 
@@ -13,26 +12,32 @@ class TestRun_Game(unittest.TestCase):
     def test_run_game_scissors_scissors_returns_None(self):
         self.assertEqual(None, run_game("scissors", "scissors"))
     
-    @unittest.skip('')
     def test_run_game_rock_paper_returns_player2(self):
-        self.assertEqual(Player("Player 2", "paper"), run_game("rock", "paper"))
+        winner = run_game("rock", "paper")
+        self.assertEqual("Player 2", winner.name)
+        self.assertEqual("paper", winner.hand)
     
-    @unittest.skip('')
     def test_run_game_paper_rock_returns_player1(self):
-        self.assertEqual(Player("Player 1", "paper"), run_game("paper", "rock"))
-    
-    @unittest.skip('')
+        winner = run_game("paper", "rock")
+        self.assertEqual("Player 1", winner.name)
+        self.assertEqual("paper", winner.hand)
+
     def test_run_game_paper_scissors_returns_player2(self):
-        self.assertEqual(Player("Player 2", "scissors"), run_game("paper", "scissors"))
-    
-    @unittest.skip('')
+        winner = run_game("paper", "scissors")
+        self.assertEqual("Player 2", winner.name)
+        self.assertEqual("scissors", winner.hand)
+
     def test_run_game_scissors_paper_returns_player1(self):
-        self.assertEqual(Player("Player 1", "scissors"), run_game("scissors", "paper"))
-    
-    @unittest.skip('')
+        winner = run_game("scissors", "paper")
+        self.assertEqual("Player 1", winner.name)
+        self.assertEqual("scissors", winner.hand)
+
     def test_run_game_scissors_rock_returns_player2(self):
-        self.assertEqual(Player("Player 2", "rock"), run_game("scissors", "rock"))
-    
-    @unittest.skip('')
+        winner = run_game("scissors", "rock")
+        self.assertEqual("Player 2", winner.name)
+        self.assertEqual("rock", winner.hand)
+
     def test_run_game_rock_scissors_returns_player1(self):
-        self.assertEqual(Player("Player 1", "rock"), run_game("rock", "scissors"))
+        winner = run_game("rock", "scissors")
+        self.assertEqual("Player 1", winner.name)
+        self.assertEqual("rock", winner.hand)
