@@ -7,7 +7,6 @@ class TestGame(unittest.TestCase):
         self.player1 = Player("Bob", "rock")
         self.player2 = Player("Tom", "paper")
 
-    @unittest.skip('')
     def test_game_has_player1(self):
         self.game = Game(self.player1, self.player2)
         self.assertEqual(self.player1, self.game.player1)
