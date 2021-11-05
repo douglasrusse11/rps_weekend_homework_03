@@ -4,15 +4,12 @@ from models.player import Player
 
 class TestRun_Game(unittest.TestCase):
 
-    @unittest.skip('')
     def test_run_game_rock_rock_returns_None(self):
         self.assertEqual(None, run_game("rock", "rock"))
     
-    @unittest.skip('')
     def test_run_game_paper_paper_returns_None(self):
         self.assertEqual(None, run_game("paper", "paper"))
     
-    @unittest.skip('')
     def test_run_game_scissors_scissors_returns_None(self):
         self.assertEqual(None, run_game("scissors", "scissors"))
     
