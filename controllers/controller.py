@@ -1,4 +1,5 @@
 from app import app
+from models.run_game import run_game
 
 @app.route('/')
 def index():
@@ -6,4 +7,8 @@ def index():
 
 @app.route('/<hand1>/<hand2>')
 def rps(hand1, hand2):
-    return f"Hand1: {hand1}, Hand2: {hand2}"
+    winner = run_game(hand1, hand2)
+    if winner:
+        return f"{winner.name} wins by playing {winner.hand}"
+    else:
+        return "It is a draw"
