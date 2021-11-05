@@ -20,7 +20,6 @@ class TestGame(unittest.TestCase):
         self.game = Game(self.player1, self.player2)
         self.assertEqual({"rock": 0, "paper": 1, "scissors": 2}, self.game.HANDS)
 
-    @unittest.skip('')
     def test_play_same_hands_returns_None(self):
         self.game = Game(self.player1, self.player1)
         self.assertEqual(None, self.game.play())

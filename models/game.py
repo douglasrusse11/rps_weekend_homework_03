@@ -3,3 +3,6 @@ class Game:
         self.player1 = player1
         self.player2 = player2
         self.HANDS = {"rock": 0, "paper": 1, "scissors": 2}
+
+    def play(self):
+        pass
