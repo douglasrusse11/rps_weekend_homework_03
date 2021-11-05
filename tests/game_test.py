@@ -53,7 +53,6 @@ class TestGame(unittest.TestCase):
         self.game = Game(self.player1, self.player4)
         self.assertEqual(404, self.game.play())
     
-    @unittest.skip('')
     def test_play_player4_player1_returns_404(self):
         self.game = Game(self.player4, self.player1)
         self.assertEqual(404, self.game.play())
