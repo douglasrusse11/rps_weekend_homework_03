@@ -56,3 +56,12 @@ class TestGame(unittest.TestCase):
     def test_play_player4_player1_returns_404(self):
         self.game = Game(self.player4, self.player1)
         self.assertEqual(404, self.game.play())
+
+    def test_play_computer(self):
+        self.game = Game(self.player1)
+        winner = self.game.play_computer()
+        if winner:
+            self.assertTrue(winner.name in ["Bob", "Computer"])
+            self.assertTrue(winner.hand in self.game.HANDS)
+        else:
+            self.assertIsNone(winner)
