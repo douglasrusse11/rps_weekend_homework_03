@@ -18,4 +18,4 @@ def rps(hand1, hand2):
 
 @app.route('/play')
 def play():
-    return "Play against the computer here"
+    return render_template("play.html")
