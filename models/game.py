@@ -1,5 +1,8 @@
+from models.player import Player
+from random import choice
+
 class Game:
-    def __init__(self, player1, player2):
+    def __init__(self, player1, player2=None):
         self.player1 = player1
         self.player2 = player2
         self.HANDS = {"rock": 0, "paper": 1, "scissors": 2}
@@ -24,3 +27,7 @@ class Game:
     
     def invalid_hand(self):
         return not self.player1.hand in self.HANDS or not self.player2.hand in self.HANDS
+
+    def play_computer(self):
+        self.player2 = Player("Computer", choice(list(self.HANDS)))
+        return self.play()

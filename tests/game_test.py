@@ -65,3 +65,7 @@ class TestGame(unittest.TestCase):
             self.assertTrue(winner.hand in self.game.HANDS)
         else:
             self.assertIsNone(winner)
+
+    def test_list_players(self):
+        self.game = Game(self.player1, self.player2)
+        self.assertEqual([self.player1, self.player2], self.game.list_players())
