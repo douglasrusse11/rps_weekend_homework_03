@@ -1,5 +1,5 @@
 from app import app
-from models.run_game import run_game, list_players
+from models.run_game import run_game
 from flask import render_template
 
 @app.route('/')
@@ -8,8 +8,7 @@ def index():
 
 @app.route('/<hand1>/<hand2>')
 def rps(hand1, hand2):
-    winner = run_game(hand1, hand2)
-    players_list = list_players(hand1, hand2)
+    winner, players_list = run_game(hand1, hand2)
     if winner == 404:
         return render_template("bam.html")
     elif winner:
