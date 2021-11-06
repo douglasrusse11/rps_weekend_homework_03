@@ -1,6 +1,6 @@
 from app import app
 from models.run_game import run_game
-from flask import render_template
+from flask import render_template, request
 
 @app.route('/')
 def index():
@@ -19,3 +19,8 @@ def rps(hand1, hand2):
 @app.route('/play')
 def play():
     return render_template("play.html")
+
+@app.route('/play', methods=["POST"])
+def play_game():
+    print(request.form)
+    return "Form submitted"
