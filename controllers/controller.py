@@ -22,5 +22,10 @@ def play():
 
 @app.route('/play', methods=["POST"])
 def play_game():
-    print(request.form)
-    return "Form submitted"
+    name = request.form["name"]
+    hand = request.form["hand"]
+    winner, players_list = run_game(name, hand, computer=True)
+    if winner:
+        return render_template("winner.html", winner_string=f"{winner.name} wins by playing {winner.hand}", players=players_list)
+    else:
+        return render_template("winner.html", winner_string="It is a draw", players = players_list)
