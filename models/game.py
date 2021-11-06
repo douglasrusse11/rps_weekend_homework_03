@@ -31,3 +31,6 @@ class Game:
     def play_computer(self):
         self.player2 = Player("Computer", choice(list(self.HANDS)))
         return self.play()
+
+    def list_players(self):
+        return [self.player1, self.player2]
