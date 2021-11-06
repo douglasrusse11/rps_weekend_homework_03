@@ -11,3 +11,7 @@ Final class diagram for MVP
 # Extension Class Diagram
 
 ![Extension Class Diagram](img/extension_class_diagram.svg)
+
+# Advanced Extension Class Diagram
+
+![Advanced Extension Class Diagram](img/advanced_extension_class_diagram.svg)
