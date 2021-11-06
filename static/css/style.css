@@ -17,7 +17,11 @@ nav {
     align-self: center;
 }
 
-nav > a {
+nav > ul {
+    list-style: none;
+}
+
+li > a {
     color: black;
     text-decoration: none;
 }
