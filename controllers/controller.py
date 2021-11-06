@@ -15,3 +15,7 @@ def rps(hand1, hand2):
         return render_template("winner.html", winner_string=f"{winner.name} wins by playing {winner.hand}", players=players_list)
     else:
         return render_template("winner.html", winner_string="It is a draw", players = players_list)
+
+@app.route('/play')
+def play():
+    return "Play against the computer here"
